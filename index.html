@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hot Deals | Spotless Mart</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+  <div class="container nav-container">
+    <h1 class="Mart"><span class="Spotless">Spotless</span> Mart</h1>
+
+    <!-- Hamburger button -->
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+
+    <nav class="navbar" id="navbar">
+      <a href="index.html" class="nav-item active">Home</a>
+      <a href="products.html" class="nav-item">Products</a>
+      <a href="about.html" class="nav-item">About</a>
+      <a href="contact.html" class="nav-item">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+
+<!-- ==============================
+     HERO / INTRO SECTION
+============================== -->
+<section class="intro-section">
+  <div class="intro-banner">
+    <div class="hero-logo-wrapper">
+      <img src="images/Mart logo new.png" alt="Spotless Mart Logo" class="hero-logo">
+    </div>
+
+    <div class="intro-content">
+      <h1>Find the Best Deals Every Day!</h1>
+      <p>Discover top products at unbeatable prices. Shop now and enjoy amazing discounts and doorstep delivery anywhere in Ghana.</p>
+      <a href="products.html" class="shop-btn">🛍️ Shop Now</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- MAIN SECTION -->
+  <main class="home">
+  <h2>🔥 Hot Deals of the Moment</h2>
+  <p class="subtext">Grab them before they’re gone!</p>
+
+  <div id="hot-deals-container" class="hot-deals-container">
+    <div id="hot-deals-grid" class="product-grid"></div>
+  </div>
+</main>
+
+
+   <footer>
+    <p>© 2025 Spotless Deals. All rights reserved.</p>
+  </footer>
+
+  <script>
+// ==============================
+// Load Products for Home Page
+// ==============================
+let products = JSON.parse(localStorage.getItem("products")) || [];
+
+// Ensure every product has a unique ID
+function ensureProductIds() {
+  let changed = false;
+  products = products.map(p => {
+    if (!p.id) {
+      p.id = Date.now().toString() + Math.random().toString(36).substr(2, 9);
+      changed = true;
+    }
+    return p;
+  });
+  if (changed) {
+    localStorage.setItem("products", JSON.stringify(products));
+  }
+}
+ensureProductIds();
+
+// Load from JSON if needed
+if (products.length === 0) {
+  fetch("data/products.json")
+    .then(res => res.json())
+    .then(data => {
+      products = data.map(p => ({
+        ...p,
+        id: p.id || Date.now().toString() + Math.random().toString(36).substr(2, 9)
+      }));
+      localStorage.setItem("products", JSON.stringify(products));
+      displayHotDeals();
+    });
+} else {
+  displayHotDeals();
+}
+
+// ==============================
+// Determine if a product is a hot deal
+// ==============================
+function isHotDeal(product) {
+  return product.oldPrice && product.oldPrice > product.price;
+}
+
+// ==============================
+// Display Hot Deals
+// ==============================
+function displayHotDeals() {
+  const grid = document.getElementById("hot-deals-grid");
+  const hotDeals = products.filter(isHotDeal);
+
+  if (hotDeals.length === 0) {
+    grid.innerHTML = `<p style="grid-column:1/-1;text-align:center;color:#777;">No hot deals at the moment.</p>`;
+    return;
+  }
+
+  const formatter = new Intl.NumberFormat("en-GH", {
+    style: "currency",
+    currency: "GHS",
+    minimumFractionDigits: 2,
+  });
+
+  grid.innerHTML = hotDeals.map((product) => `
+    <div class="product-card hot-deal">
+      <div class="product-image-wrapper">
+        <img src="${product.image}" alt="${product.name}" class="product-img">
+        <span class="hot-badge">HOT 🔥</span>
+      </div>
+      <div class="product-info">
+        <h3 class="product-title">${product.name}</h3>
+        <div class="product-price">
+          <span class="current-price">${formatter.format(product.price)}</span>
+          <span class="old-price">${formatter.format(product.oldPrice)}</span>
+        </div>
+        <a href="product.html?id=${product.id}" class="details-btn">View Deal</a>
+      </div>
+    </div>
+  `).join("");
+}
+
+// Auto-refresh Hot Deals every 3 minutes
+setInterval(() => {
+  displayHotDeals();
+}, 180000);
+
+// ==============================
+// Keyboard Shortcut to Admin
+// ==============================
+document.addEventListener("keydown", (e) => {
+  if (e.ctrlKey && e.shiftKey && e.key === "A") {
+    window.location.href = "admin.html";
+  }
+});
+</script>
+
+</body>
+</html>
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navbar = document.getElementById("navbar");
+
+  hamburger.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>

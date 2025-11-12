@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | Spotless Deals</title>
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">💼 Spotless Admin</div>
+    <nav>
+      <a href="index.html">🏠 Home</a>
+    </nav>
+
+    <button onclick="logoutAdmin()" style="background:#e74c3c;color:#fff;padding:8px 15px;border:none;border-radius:8px;cursor:pointer;">Logout</button>
+
+  </header>
+
+  <main class="admin-container">
+    <h1>🛍️ Manage Products</h1>
+
+    <!-- PRODUCT FORM -->
+    <form id="product-form" class="product-form">
+      <h2>Add / Edit Product</h2>
+
+      <input type="hidden" id="product-index">
+
+      <label>Product Name</label>
+      <input type="text" id="product-name" required>
+
+      <label>Category</label>
+      <select id="product-category" required>
+        <option value="">Select category</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Accessories">Accessories</option>
+            <option value="Supermarket">Supermarket</option>
+                <option value="Other Categories">Other Categories</option>
+      </select>
+
+      <label>Product Image</label>
+<input type="file" id="product-image" accept="image/*">
+<img id="image-preview" src="" alt="Preview" style="width:120px;margin-top:10px;display:none;border-radius:8px;">
+
+
+      <label>Price (GHS)</label>
+      <input type="number" id="product-price" required>
+
+      <label>Old Price (optional)</label>
+      <input type="number" id="product-oldprice">
+
+      <label>Description</label>
+      <textarea id="product-description" rows="3"></textarea>
+
+      <button type="submit" class="save-btn">💾 Save Product</button>
+    </form>
+
+    <!-- PRODUCT LIST -->
+    <section class="product-list">
+      <h2>Existing Products</h2>
+      <table id="product-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Preview</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

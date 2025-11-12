@@ -1,0 +1,146 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #27ae60;
+  color: #fff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: 500;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Container */
+.admin-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+h1, h2 {
+  color: #222;
+  text-align: center;
+}
+
+/* Form */
+.product-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 20px;
+  margin-bottom: 40px;
+}
+
+.product-form label {
+  grid-column: span 2;
+  font-weight: 500;
+  color: #444;
+}
+
+.product-form input,
+.product-form select,
+.product-form textarea {
+  grid-column: span 2;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.product-form input:focus,
+.product-form select:focus,
+.product-form textarea:focus {
+  border-color: #27ae60;
+  box-shadow: 0 0 5px rgba(39,174,96,0.2);
+  outline: none;
+}
+
+.save-btn {
+  grid-column: span 2;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn:hover {
+  background: #219150;
+}
+
+/* Product Table */
+.product-list table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.product-list th, .product-list td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.product-list img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.action-btn {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin: 0 3px;
+  transition: 0.3s;
+}
+
+.action-btn.delete {
+  background: #e74c3c;
+}
+
+.action-btn:hover {
+  opacity: 0.8;
+}
+
+#image-preview {
+  border: 2px solid #ddd;
+  padding: 5px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}

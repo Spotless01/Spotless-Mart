@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Products | Spotless Mart</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ============================== -->
+  <!-- HEADER -->
+  <!-- ============================== -->
+<header class="site-header">
+  <div class="container nav-container">
+    <h1 class="Mart"><span class="Spotless">Spotless</span> Mart</h1>
+
+    <!-- Hamburger button -->
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+
+    <nav class="navbar" id="navbar">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="products.html" class="nav-item active">Products</a>
+      <a href="about.html" class="nav-item">About</a>
+      <a href="contact.html" class="nav-item">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+
+  <!-- ============================== -->
+  <!-- PRODUCTS PAGE CONTENT -->
+  <!-- ============================== -->
+  <main class="products">
+    <h2>🛍️ All Products</h2>
+
+    <!-- FILTERS -->
+    <div class="filters">
+      <input type="text" id="search-input" placeholder="Search products..." />
+      <select id="category-filter">
+        <option value="all">All Categories</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Accessories">Accessories</option>
+            <option value="Supermarket">Supermarket</option>
+                  <option value="Other Categories">Other Categories</option>
+      </select>
+    </div>
+
+    <!-- PRODUCT GRID -->
+    <div id="product-grid" class="product-grid">
+      <!-- Products will be inserted here dynamically by main.js -->
+    </div>
+  </main>
+
+  <!-- ============================== -->
+  <!-- FOOTER -->
+  <!-- ============================== -->
+  <footer>
+    <p>© 2025 Spotless Deals. All rights reserved.</p>
+  </footer>
+
+  <!-- ============================== -->
+  <!-- SCRIPTS -->
+  <!-- ============================== -->
+  <script src="js/main.js"></script>
+
+  <script>
+  const hamburger = document.getElementById("hamburger");
+  const navbar = document.getElementById("navbar");
+
+  hamburger.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>

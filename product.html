@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details | Spotless Deals</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-container">
+    <h1 class="Mart"><span class="Spotless">Spotless</span> Mart</h1>
+
+    <!-- Hamburger button -->
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+
+    <nav class="navbar" id="navbar">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="products.html" class="nav-item">Products</a>
+      <a href="about.html" class="nav-item">About</a>
+      <a href="contact.html" class="nav-item active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+
+  <main class="product-detail-container">
+    <a href="index.html" class="back-link">← Back</a>
+    <div class="product-detail-card">
+      <div class="product-detail-image">
+        <img id="product-image" src="" alt="Product">
+      </div>
+      <div class="product-detail-info">
+        <h1 id="product-name">Product Name</h1>
+        <p class="price"><span id="product-price"></span></p>
+        <p id="product-description"></p>
+        <a id="whatsapp-btn" target="_blank" class="buy-whatsapp-btn">💬 Buy on WhatsApp</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Spotless Deals. All rights reserved.</p>
+  </footer>
+
+  <script src="js/product.js"></script>
+
+  <script>
+  const hamburger = document.getElementById("hamburger");
+  const navbar = document.getElementById("navbar");
+
+  hamburger.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>

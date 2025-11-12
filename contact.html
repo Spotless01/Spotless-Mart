@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Spotless Mart</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+  <div class="container nav-container">
+    <h1 class="Mart"><span class="Spotless">Spotless</span> Mart</h1>
+
+    <!-- Hamburger button -->
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+
+    <nav class="navbar" id="navbar">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="products.html" class="nav-item">Products</a>
+      <a href="about.html" class="nav-item">About</a>
+      <a href="contact.html" class="nav-item active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+  <section class="contact-section">
+    <div class="contact-content">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you! Reach out to us using any of the options below.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>📍 Address</h3>
+          <p>Accra, Ghana</p>
+
+          <h3>📞 Phone</h3>
+          <p>+233 55 183 6194</p>
+
+          <h3>✉️ Email</h3>
+          <p><a href="mailto:miezadelivery@gmail.com">miezadelivery@gmail.com</a></p>
+
+          <h3>💬 WhatsApp</h3>
+          <a href="https://wa.me/233551836194" class="whatsapp-float" target="_blank">💬</a>
+        </div>
+
+        <!-- Contact form connected to Formspree -->
+        <form class="contact-form" action="https://formspree.io/f/xqawknpo" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+          
+          <!-- Optional: Email subject line -->
+          <input type="hidden" name="_subject" value="New Contact Form Message from Spotless Mart">
+
+          <!-- Optional: Redirect after submission -->
+          <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html"> -->
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Spotless Mart. All rights reserved.</p>
+  </footer>
+  <script>
+  const hamburger = document.getElementById("hamburger");
+  const navbar = document.getElementById("navbar");
+
+  hamburger.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>

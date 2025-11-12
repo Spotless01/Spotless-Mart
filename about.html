@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Spotless Mart</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ <header class="site-header">
+  <div class="container nav-container">
+    <h1 class="Mart"><span class="Spotless">Spotless</span> Mart</h1>
+
+    <!-- Hamburger button -->
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+
+    <nav class="navbar" id="navbar">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="products.html" class="nav-item">Products</a>
+      <a href="about.html" class="nav-item active">About</a>
+      <a href="contact.html" class="nav-item">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+
+  <section class="about-section">
+    <div class="about-content">
+      <h1>About Spotless Mart</h1>
+      <p>
+        Welcome to <strong>Spotless Mart</strong> — your trusted online store for high-quality products at unbeatable prices.
+        We believe shopping should be convenient, transparent, and affordable.
+      </p>
+
+      <p>
+        From household essentials to fashion and gadgets, we handpick every product to ensure quality and customer satisfaction.
+      </p>
+
+      <p>
+        Our mission is simple — <em>to bring convenience and quality to your doorstep</em>.
+      </p>
+
+      <div class="about-highlights">
+        <div class="highlight">
+          <h3>💚 Our Vision</h3>
+          <p>To be Ghana’s most trusted online marketplace.</p>
+        </div>
+        <div class="highlight">
+          <h3>🚀 Our Mission</h3>
+          <p>Deliver quality products, fast and affordably.</p>
+        </div>
+        <div class="highlight">
+          <h3>🤝 Our Promise</h3>
+          <p>We stand by our products — your satisfaction comes first.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Spotless Mart. All rights reserved.</p>
+  </footer>
+  <script>
+  const hamburger = document.getElementById("hamburger");
+  const navbar = document.getElementById("navbar");
+
+  hamburger.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>

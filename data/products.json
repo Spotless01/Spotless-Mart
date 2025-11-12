@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "Wireless Earbuds",
+        "price": "₵150",
+        "oldPrice": "₵220",
+        "category": "Electronics",
+        "description": "Enjoy clear sound and long battery life with our wireless earbuds.",
+        "image": "https://via.placeholder.com/400x400.png?text=Earbuds"
+    },
+    {
+        "id": 2,
+        "name": "Smart Watch",
+        "price": "₵250",
+        "oldPrice": "₵350",
+        "category": "Electronics",
+        "description": "Track your fitness and stay connected with this stylish smartwatch.",
+        "image": "https://via.placeholder.com/400x400.png?text=Smart+Watch"
+    },
+    {
+        "id": 3,
+        "name": "Bluetooth Speaker",
+        "price": "₵180",
+        "oldPrice": "₵260",
+        "category": "Electronics",
+        "description": "Portable Bluetooth speaker with deep bass and 10-hour battery life.",
+        "image": "https://via.placeholder.com/400x400.png?text=Speaker"
+    },
+    {
+        "id": 4,
+        "name": "Running Shoes",
+        "price": "₵320",
+        "oldPrice": "₵450",
+        "category": "Fashion",
+        "description": "Lightweight and comfortable running shoes for daily wear.",
+        "image": "https://via.placeholder.com/400x400.png?text=Shoes"
+    },
+    {
+        "id": 5,
+        "name": "Backpack",
+        "price": "₵200",
+        "oldPrice": "₵300",
+        "category": "Accessories",
+        "description": "Stylish backpack perfect for school, travel, or work.",
+        "image": "https://via.placeholder.com/400x400.png?text=Backpack"
+    }
+]
