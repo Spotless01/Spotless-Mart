@@ -1,18 +1,12 @@
 [
   {
-    "name": "Yam 5kg",
-    "category": "Food",
-    "price": 45.99,
-    "oldPrice": 55.99,
-    "description": "Fresh Ghanaian yam.",
+    "name": "Miztabryn Anti Blue Light Computer Glasses",
+    "category": "Accessories",
+    "price": 50,
+    "oldPrice": 145,
+    "description": "Stay stylish while protecting your eyes with our Anti Blue Light Computer Glasses. Featuring UV400 technology, they reduce eye strain, improve sleep, and block harmful blue light from screens. Designed for comfort and fashion, they're perfect for anyone spending 6–8 hours daily on digital devices; from gamers and designers to students and binge-watchers.",
     "image": "images/yam.jpg"
   },
-  {
-    "name": "Bluetooth Speaker",
-    "category": "Electronics",
-    "price": 120.00,
-    "oldPrice": 180.00,
-    "description": "Portable wireless speaker with deep bass.",
-    "image": "images/speaker.jpg"
-  }
+
 ]
+
